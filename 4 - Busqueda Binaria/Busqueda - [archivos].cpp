@@ -155,6 +155,9 @@ void mostrarArreglo(int *a, int n){
 // int arreglo ordenado , longitud , numero buscado
 void busquedaBinaria (int *array , int length,int searchNumber){
 	
+	bool isFind=false;
+	
+	
 	
 	int first = 0;
 	int middle = 0;
@@ -174,8 +177,8 @@ void busquedaBinaria (int *array , int length,int searchNumber){
 		
 	//	cout << searchNumber<< " == ? "<<array[middle] <<endl;
 		if(searchNumber==array[middle]){
-			
-			cout <<" \n Se ha encontardo el numero : "<< searchNumber << " \n en la posicion"<< middle <<endl; 
+			// + 1 equivalante a entender mejor el areglo
+			cout <<" \n \n Se ha encontardo el numero : "<< searchNumber << " \n en la posicion : "<< middle + 1 <<endl; 
 			break;
 		}else{
 			if (searchNumber<=array[middle-1]){ // revisa a la izauierda
@@ -186,9 +189,12 @@ void busquedaBinaria (int *array , int length,int searchNumber){
 			}
 			
 		} 
-	
+		
 	}
-
-
+	
+	// si no encuentra entonces 
+	if ( !(first <= last) && !isFind){
+		cout << " \n \n No se ha encontrado el nuemero \n " <<endl;
+	}
 
 }
