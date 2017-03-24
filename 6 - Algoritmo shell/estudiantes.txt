@@ -1,0 +1,5 @@
+/*
+Algoritmo shell
+Cristian Eduardo Ríos Guarín - 20141020058
+Diego Alejandro Henrnadez - 20141020271	
+*/
