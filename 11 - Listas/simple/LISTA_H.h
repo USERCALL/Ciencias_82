@@ -4,13 +4,15 @@
 #include <iostream>
 
 using namespace std;
-template <class T>
 
+
+template <class T>
 struct Nodo
 {
     Nodo <T> *sig;
     T info;
 };
+
 
 template <class T>
 class Lista
@@ -35,6 +37,7 @@ class Lista
 
 };
 
+
 template <class T>
 void Lista<T>:: insertar_pos(T infoNueva, int pos)
 {
@@ -56,7 +59,7 @@ void Lista<T>:: insertar_pos(T infoNueva, int pos)
             while (p < pos-1)
             {
                 aux = aux->sig;
-              }
+            }
             nuevo->sig = aux->sig;
             aux->sig = nuevo;
             tam++;
@@ -64,6 +67,7 @@ void Lista<T>:: insertar_pos(T infoNueva, int pos)
 
     }
 }
+
 
 template <class T>
 void Lista<T>::insertar_final(T infoNueva)
@@ -92,6 +96,7 @@ void Lista<T>::insertar_final(T infoNueva)
     tam++;
 }
 
+
 template <class T>
 void Lista<T>::insertar_inicio(T infoNueva)
 {
@@ -102,6 +107,7 @@ void Lista<T>::insertar_inicio(T infoNueva)
     cab = nuevo;
     tam++;
 }
+
 
 template <class T>
 T Lista<T>::obtener_dato(int pos)
@@ -167,6 +173,7 @@ bool Lista<T>::lista_vacia()
     else
         return false;
 }
+
 
 template <class T>
 void Lista<T>::imprimir()
